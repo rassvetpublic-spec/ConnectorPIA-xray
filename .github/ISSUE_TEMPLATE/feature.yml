@@ -1,0 +1,56 @@
+name: Новая функция
+description: Предложить новую возможность ConnectorPIA-xray
+title: "[Функция] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Опишите результат простыми словами. Не публикуйте токены, cookies, пароли, ключи и другие секреты.
+  - type: textarea
+    id: result
+    attributes:
+      label: Что хотим получить?
+      description: Как выглядит готовый результат?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Зачем это нужно?
+      description: Какую реальную проблему или потребность решает функция?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope — область задачи
+      description: Что допустимо менять для реализации?
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Что точно не входит в задачу?
+      description: Если не знаете — напишите «не знаю».
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Как проверить результат?
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Когда задачу считать готовой?
+      description: Перечислите проверяемые критерии готовности.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Проверка перед отправкой
+      options:
+        - label: Я не публикую секреты и чувствительные auth-данные.
+          required: true
