@@ -1,0 +1,64 @@
+name: Техническая задача
+description: Архитектура, CI, инфраструктура, тесты, безопасность или внутреннее устройство проекта
+title: "[Техзадача] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Опишите одну конкретную техническую задачу. Не публикуйте токены, cookies, пароли, ключи и другие секреты.
+  - type: textarea
+    id: goal
+    attributes:
+      label: Что хотим получить?
+      description: Один конкретный проверяемый результат.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Зачем это нужно?
+      description: Какой риск, долг, блокер или потребность закрывается?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope — область задачи
+      description: Какие части проекта разрешено менять?
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Что не входит в задачу?
+      description: Что нельзя незаметно включать в эту работу?
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Зависимости и связанные задачи
+      description: Issues, PR, внешние блокеры. Если нет — «нет».
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Как проверить результат?
+      description: Тесты, CI, ручная проверка или другое Evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Критерии готовности
+      description: Проверяемые условия завершения.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Проверка перед отправкой
+      options:
+        - label: Я проверил Scope и не публикую секреты.
+          required: true

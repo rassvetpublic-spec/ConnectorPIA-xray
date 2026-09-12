@@ -1,0 +1,58 @@
+name: Улучшение
+description: Улучшить существующую функцию, процесс или документацию
+title: "[Улучшение] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Используйте форму, когда функция уже существует, но её можно сделать понятнее, надёжнее, безопаснее или удобнее.
+  - type: textarea
+    id: current
+    attributes:
+      label: Как работает сейчас?
+    validations:
+      required: true
+  - type: textarea
+    id: desired
+    attributes:
+      label: Как должно стать лучше?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Зачем это нужно?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope — область задачи
+      description: Какие части проекта допустимо менять?
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Что не входит в задачу?
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Как проверить результат?
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Когда задачу считать готовой?
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Проверка перед отправкой
+      options:
+        - label: Я не публикую секреты и чувствительные auth-данные.
+          required: true
