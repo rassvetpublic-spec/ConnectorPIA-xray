@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "model": "KAT9I_OS-governance",
+  "repository": "rassvetpublic-spec/ConnectorPIA-xray",
+  "layout_capabilities": {
+    "TABLE_LAYOUT": {
+      "visible_fields": true,
+      "filter": true
+    },
+    "BOARD_LAYOUT": {
+      "visible_fields": true,
+      "filter": true
+    },
+    "ROADMAP_LAYOUT": {
+      "visible_fields": false,
+      "filter": true
+    }
+  },
+  "views": [
+    {
+      "name": "00 — Dashboard",
+      "layout": "TABLE_LAYOUT",
+      "filter": ""
+    },
+    {
+      "name": "01 — Queue",
+      "layout": "BOARD_LAYOUT",
+      "filter": "is:open"
+    },
+    {
+      "name": "02 — Active Work",
+      "layout": "BOARD_LAYOUT",
+      "filter": "is:open {status}:\"В работе\""
+    },
+    {
+      "name": "03 — QA Gate",
+      "layout": "TABLE_LAYOUT",
+      "filter": "is:open {status}:\"Проверка QA\""
+    },
+    {
+      "name": "04 — Release Flow",
+      "layout": "BOARD_LAYOUT",
+      "filter": "is:pr"
+    },
+    {
+      "name": "05 — Roadmap",
+      "layout": "ROADMAP_LAYOUT",
+      "filter": "is:open"
+    },
+    {
+      "name": "06 — Blocked / Parking",
+      "layout": "TABLE_LAYOUT",
+      "filter": "is:open {status}:\"Заблокировано\""
+    },
+    {
+      "name": "07 — Agent KPI",
+      "layout": "TABLE_LAYOUT",
+      "filter": "has:Исполнитель"
+    }
+  ],
+  "fields": [
+    "Статус",
+    "Этап",
+    "Приоритет",
+    "Тип",
+    "Область",
+    "Размер",
+    "Итерация",
+    "Исполнитель",
+    "Проверяющий",
+    "Исполнение",
+    "Цель",
+    "Риск",
+    "Доказательство"
+  ],
+  "provisioning_status": "PROVISIONAL_UNTIL_PLATFORM_EVIDENCE"
+}
