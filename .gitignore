@@ -1,0 +1,44 @@
+# Secrets / auth
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*token*
+*cookie*
+*session*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local runtime / generated state
+.agents/
+.tmp/
+tmp/
+.cache/
+logs/
+*.log
+
+# Raw/generated outputs are local by default.
+# Curated artifacts may be added later through an explicit Issue/PR.
+outputs/
+artifacts/
+reports/generated/
+
+# Browser / connector state
+browser-profile/
+profiles/
+auth/
+credentials/
