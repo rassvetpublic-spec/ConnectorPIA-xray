@@ -1,0 +1,58 @@
+name: Обратная связь
+description: Задать вопрос, предложить идею, сообщить об ошибке или сказать, что документация непонятна
+title: "[Обратная связь] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Не нужно знать внутренние термины ConnectorPIA-xray. Опишите ситуацию обычными словами.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Что вы хотите сообщить?
+      options:
+        - Задать вопрос
+        - Предложить идею
+        - Сообщить об ошибке
+        - Сказать, что документация непонятна
+        - Другое
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Что вы пытались сделать?
+      description: Одного-двух предложений достаточно.
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: Что произошло?
+      description: Если это идея или вопрос, опишите её здесь.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что вы ожидали?
+  - type: textarea
+    id: links
+    attributes:
+      label: Ссылка, скриншот или дополнительная информация
+      description: Добавляйте только данные без токенов, cookies, паролей и других секретов.
+  - type: dropdown
+    id: help
+    attributes:
+      label: Хотите помочь с исправлением или улучшением?
+      options:
+        - Да
+        - Возможно, если объяснят что делать
+        - Нет, только сообщаю
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Перед отправкой
+      options:
+        - label: Я не добавил пароль, API-ключ, токен доступа, cookie или другой секрет.
+          required: true
