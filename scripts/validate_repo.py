@@ -13,11 +13,16 @@ ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = (
     "README.md",
     "AGENTS.md",
+    "QA_INSTRUCTIONS.md",
     ".gitignore",
+    ".agent/rules/auto_project_initialize.md",
     ".agent/rules/issue_driven_workflow.md",
     ".agent/rules/safe_sync_gate.md",
     ".agent/rules/security.md",
     ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/feature.md",
+    ".github/ISSUE_TEMPLATE/bug.md",
+    ".github/workflows/ci.yml",
 )
 
 FORBIDDEN_PREFIXES = (
