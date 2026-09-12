@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   quality:
-    name: Governance, структура и hygiene
+    name: Базовые проверки качества и целостности
     runs-on: ubuntu-latest
     steps:
       - name: Получить репозиторий
