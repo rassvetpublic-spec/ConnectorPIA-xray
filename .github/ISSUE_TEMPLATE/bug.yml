@@ -1,0 +1,62 @@
+name: Ошибка
+description: Сообщить, что в ConnectorPIA-xray что-то работает неправильно
+title: "[Ошибка] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Опишите проблему так, чтобы её можно было повторить и проверить. Не публикуйте секреты.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что должно было произойти?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Что произошло на самом деле?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Как повторить ошибку?
+      placeholder: |
+        1. Открыть...
+        2. Запустить...
+        3. Увидеть...
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Контекст
+      description: Версия, ветка, ОС, модуль, режим запуска и другая полезная информация.
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Что не нужно менять в рамках исправления?
+      description: Если не знаете — напишите «не знаю».
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Как проверить исправление?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Дополнительные данные
+      description: Безопасные логи, ссылки или скриншоты без секретов.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Проверка перед отправкой
+      options:
+        - label: Я не добавляю токены, cookies, пароли, приватные ключи и другие секреты.
+          required: true
